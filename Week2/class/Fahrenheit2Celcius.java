@@ -13,7 +13,7 @@ public class Fahrenheit2Celcius
 		fTemp = scanner.nextDouble();
 
 		/* Convert fahrenheit to celcius and output */
-		cTemp = (5.0/9.0) * (fTemp - 32);
+		cTemp = (5.0/9.0) * (fTemp - 32.0);
 		System.out.println(fTemp + " fahrenheit is " + cTemp + " celcius");
 	}
 }
