@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class MinutesToYaD
 {
 	public static void main(String[] args)
-	{
+	{		
 		/* Creating scanner and variables */
 		Scanner scanner = new Scanner(System.in);
 		int years;
@@ -23,6 +23,7 @@ public class MinutesToYaD
 		days = (minutes % 525600) / 1440;
 
 		/* Printing out years and hours from minutes */
-		System.out.println(minutes + " minutes is " + years + " year(s) and " + days + " day(s)");
+		// System.out.println(minutes + " minutes is " + years + " year(s) and " + days + " day(s)");
+		System.out.printf("%d minutes is %d year(s) and %d day(s)\n", minutes, years, days);
 	}
 }
