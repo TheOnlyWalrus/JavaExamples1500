@@ -1,0 +1,10 @@
+INPUT SEQUENCE
+AGCTTTTCATTCTGACTGCAACGGGCA
+INPUT PATTERN
+CA
+TOTAL NUCLEOTIDES 27
+                G 6
+                C 7
+                T 8
+                A 6
+          PATTERN 3
