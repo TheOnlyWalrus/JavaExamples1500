@@ -10,7 +10,7 @@ public class YaDtoMinutes {
 		
 		scanner.close();
 		
-		int minutes = years * 525600 + days * 1440;
+		long minutes = (long)years * (long)525600 + (long)days * (long)1440;
 		
 		System.out.printf("%d years and %d days in minutes is %d\n", years, days, minutes);
 	}

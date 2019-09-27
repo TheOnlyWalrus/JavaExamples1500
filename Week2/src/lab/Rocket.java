@@ -25,9 +25,9 @@ public class Rocket
 		double y = 0.0;
 		double v = 0.0;
 		double a = 0.0;
-		double deltaTime = 1.0e-3;
+		double deltaTime = 1.0e-6;
 
-		/* For each timestep */
+		/* For each time step */
 		while (v >= 0.0)
 		{
 			/* Calculate acceleration */
@@ -76,7 +76,7 @@ public class Rocket
 				(radiusEarth + y)
 			);
 
-			/* Output values at each timestep */
+			/* Output values at each time step */
 			System.out.printf("%9.3f %9.3f %9.3f %9.3f %9.3f\n", time, y, v, escapeVelocity, fuelMass);
 
 			/* Update time */
