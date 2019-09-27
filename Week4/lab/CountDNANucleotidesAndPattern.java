@@ -45,6 +45,7 @@ public class CountDNANucleotidesAndPattern
 					System.exit(0);
 			}
 
+			/* Searching for pattern in dna string */
 			if (i <= dna.length() - pattern.length())
 			{
 				String find_pattern = dna.substring(i, i + pattern.length());

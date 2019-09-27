@@ -45,6 +45,7 @@ public class CountRNANucleotidesAndPattern
 					System.exit(0);
 			}
 
+			/* Searching for pattern in rna string */
 			if (i <= rna.length() - pattern.length())
 			{
 				String find_pattern = rna.substring(i, i + pattern.length());
