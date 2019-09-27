@@ -10,7 +10,6 @@ public class CountDNANucleotides
 		int T = 0;
 		int G = 0;
 		int C = 0;
-		int count = 0;
 
 		/* Reading input from scanner */
 		String dna = scanner.next().toUpperCase();
@@ -29,19 +28,15 @@ public class CountDNANucleotides
 			{
 				case 'A':
 					A += 1;
-					count += 1;
 					break;
 				case 'T':
 					T += 1;
-					count += 1;
 					break;
 				case 'G':
 					G += 1;
-					count += 1;
 					break;
 				case 'C':
 					C += 1;
-					count += 1;
 					break;
 				/* If character isn't A, T, G, or C, exit */
 				default:
@@ -51,6 +46,6 @@ public class CountDNANucleotides
 		}
 
 		/* Printing out results */
-		System.out.printf("Nucleotide count: %d\nA count: %d\nT count: %d\nG count: %d\nC count: %d\n", count, A, T, G, C);
+		System.out.printf("Nucleotide count: %d\nA count: %d\nT count: %d\nG count: %d\nC count: %d\n", dna.length(), A, T, G, C);
 	}
 }
