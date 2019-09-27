@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CountRNANucleotides
+public class CountRNANucleotidesAndPattern
 {
 	public static void main(String[] args)
 	{
@@ -10,10 +10,11 @@ public class CountRNANucleotides
 		int U = 0;
 		int G = 0;
 		int C = 0;
+		int pattern_count = 0;
 
 		/* Reading input from scanner */
 		String rna = scanner.next().toUpperCase();
-
+		String pattern = scanner.next().toUpperCase();
 		/* Closing the scanner */
 		scanner.close();
 
@@ -43,9 +44,18 @@ public class CountRNANucleotides
 					System.out.printf("Invalid nucleotide \"%c\" at position %d\n", nucleotide, i);
 					System.exit(0);
 			}
+
+			if (i <= rna.length() - pattern.length())
+			{
+				String find_pattern = rna.substring(i, i + pattern.length());
+				if (find_pattern.equals(pattern))
+				{
+					pattern_count += 1;
+				}
+			}
 		}
 
 		/* Printing out results */
-		System.out.printf("Nucleotide count: %d\nA count: %d\nU count: %d\nG count: %d\nC count: %d\n", rna.length(), A, U, G, C);
+		System.out.printf("Nucleotide count: %d\nA count: %d\nU count: %d\nG count: %d\nC count: %d\nPattern count (%s): %d\n", dna.length(), A, U, G, C, pattern, pattern_count);
 	}
 }
