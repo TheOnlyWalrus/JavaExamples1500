@@ -25,7 +25,7 @@ public class Rocket
 		double y = 0.0;
 		double v = 0.0;
 		double a = 0.0;
-		double deltaTime = 1.0e-6;
+		double deltaTime = 0.01;
 
 		/* For each time step */
 		while (v >= 0.0)
