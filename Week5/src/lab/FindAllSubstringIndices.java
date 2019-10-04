@@ -17,7 +17,7 @@ public class FindAllSubstringIndices
 		scanner.close();
 		
 		/* Searching through dna to find pattern */
-		for (int i = 0; i  < dna.length(); i++)
+		for (int i = 0; i < dna.length(); i++)
 		{
 			/* If the search is past the length of dna, break */
 			if (i + pattern.length() > dna.length())
