@@ -42,6 +42,6 @@ public class DNAReverseCompliment
 		}
 		
 		/* Printing out the result */
-		System.out.printf("The reverse compliment to\n%s\nis\n%s\n", dna, reverseCompliment);
+		System.out.printf("The reverse compliment is\n%s\n", dna, reverseCompliment);
 	}
 }
