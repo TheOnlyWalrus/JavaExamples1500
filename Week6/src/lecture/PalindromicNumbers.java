@@ -5,14 +5,13 @@ public class PalindromicNumbers
 	public static void main(String[] args)
 	{	
 		int max = 0;
-		int max_i = 100;
-		int max_j = 100;
-		
 		int digits = 4;
+		int max_i = (int)Math.pow(10, digits-1);
+		int max_j = (int)Math.pow(10, digits-1);
 		
-		for (int i = 100; i < 10000; i++)
+		for (int i = (int)Math.pow(10, digits-1); i < (int)Math.pow(10, digits); i++)
 		{
-			for (int j = 100; j < 10000; j++)
+			for (int j = (int)Math.pow(10, digits-1); j < (int)Math.pow(10, digits); j++)
 			{
 				int n = i * j;
 				String s = "" + n;
@@ -41,6 +40,6 @@ public class PalindromicNumbers
 			}
 		}
 		
-		System.out.printf("%d * %d = %d {Largest palindromic number that's a product of two %d digit numbers}", max_i, max_j, max, digits);
+		System.out.printf("%d * %d = %d {Largest palindromic number that's a product of two %d digit numbers}", max_i, max_j, max, digits);;
 	}
 }
