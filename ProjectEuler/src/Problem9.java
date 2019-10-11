@@ -22,7 +22,7 @@ public class Problem9
 						if (a + b + c == 1000)
 						{
 							product = a * b * c;
-							System.out.println(product);
+							System.out.printf("Triplet:\n	a = %d\n	b = %d\n	c = %d\nProduct: %d\n", a, b, c, product);
 							System.exit(0);
 						}
 					}
