@@ -5,7 +5,7 @@ public class PalindromicNumbers
 	public static void main(String[] args)
 	{	
 		int max = 0;
-		int digits = 4;
+		int digits = 3;
 		int max_i = (int)Math.pow(10, digits-1);
 		int max_j = (int)Math.pow(10, digits-1);
 		
