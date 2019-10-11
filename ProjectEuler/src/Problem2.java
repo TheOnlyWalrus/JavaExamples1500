@@ -19,8 +19,6 @@ public class Problem2
 			f2 = fib;
 		}
 		
-		System.out.println(fib);
-		
 		System.out.println(sum);
 	}
 }
