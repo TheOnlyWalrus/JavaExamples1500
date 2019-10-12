@@ -15,7 +15,7 @@ public class Problem099
 		
 		FileInputStream stream = null;
 		try {
-			stream = new FileInputStream("p099_base_exp.txt");
+			stream = new FileInputStream("src/ext/p099_base_exp.txt");
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 			System.exit(1);
