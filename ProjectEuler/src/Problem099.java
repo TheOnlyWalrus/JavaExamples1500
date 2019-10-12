@@ -1,33 +1,51 @@
-import java.math.BigInteger;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Problem099
 {
 	public static void main(String[] args)
 	{
-		Scanner scanner = new Scanner(System.in);
-		BigInteger top = new BigInteger("0");
+		int maxline = 0;
+		double max = 0;
+		int current = 0;
 		
-		String[] full = scanner.next().split("\n");
-		scanner.close();
-		
-		int line = 0;
-		for (String data : full)
-		{
-			line++;
-			
-			String[] list = data.split(",");
-			int num = Integer.parseInt(list[0]);
-			int exp = Integer.parseInt(list[1]);
-			
-			BigInteger result = new BigInteger("" + (int)(Math.pow(num, exp)));
-			
-			if (result.compareTo(top) > 0)
-			{
-				top = result;
-			}
+		FileInputStream stream = null;
+		try {
+			stream = new FileInputStream("p099_base_exp.txt");
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+			System.exit(1);
 		}
 		
-		System.out.println(line);
+		DataInputStream in = new DataInputStream(stream);
+		BufferedReader br = new BufferedReader(new InputStreamReader(in));
+		String line;
+		String[] line_arr;
+		
+		try {
+			while ((line = br.readLine()) != null)
+			{
+				current++;
+				line_arr = line.replace("\n", "").split(",");
+				double base = Math.log(Integer.parseInt(line_arr[0]));
+				int exp = Integer.parseInt(line_arr[1]);
+				
+				double num = base * exp;
+				if (num > max)
+				{
+					maxline = current;
+					max = num;
+				}
+			}
+			in.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println(maxline);
 	}
 }
