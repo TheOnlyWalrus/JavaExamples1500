@@ -15,6 +15,7 @@ public class Problem034
 	public static void main(String[] args)
 	{
 		int sum = 0;
+		
 		for (int i = 3; i < 10000000; i++)
 		{
 			int sumOfDigits = 0;
