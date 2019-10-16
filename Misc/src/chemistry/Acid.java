@@ -1,6 +1,6 @@
 package chemistry;
 
-public class Base
+public class Acid
 {
-	
+
 }

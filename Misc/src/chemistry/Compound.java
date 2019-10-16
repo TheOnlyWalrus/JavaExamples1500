@@ -24,6 +24,23 @@ public class Compound
 		this.mass = this.molarMass * moles;
 	}
 	
+	
+	/* Force charge */
+	public Compound(int moles, int charge, Element ...elements)
+	{
+		this.moles = moles;
+		
+		double sum = 0;
+		for (Element element : elements)
+		{
+			sum += element.getMass();
+		}
+		
+		this.molarMass = sum;
+		this.charge = charge;
+		this.mass = this.molarMass * moles;
+	}
+	
 	public int getCharge()
 	{
 		return this.charge;

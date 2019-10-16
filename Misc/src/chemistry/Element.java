@@ -2,6 +2,7 @@ package chemistry;
 
 public class Element
 {
+	MatterState naturalState;
 	String symbol;
 	int charge;
 	int oxidationNumber;
@@ -16,8 +17,9 @@ public class Element
 	double meltingTemperature;
 	double molarMass;
 	
-	public Element(String symbol, int moles, double molarMass, int neutrons, int protons, int charge)
+	public Element(String symbol, MatterState naturalState, int moles, double molarMass, int neutrons, int protons, int charge)
 	{
+		this.naturalState = naturalState;
 		this.symbol = symbol;
 		this.moles = moles;
 		this.molarMass = molarMass;
