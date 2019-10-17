@@ -2,24 +2,24 @@ package chemistry;
 
 public class Element
 {
-	MatterState naturalState;
-	String symbol;
-	int charge;
-	int oxidationNumber;
-	int totalCharge;
-	int atomicMass;
-	int neutrons;
-	int protons;
-	int electrons;
-	int atomicNumber;
-	int moles;
-	double mass;
-	double meltingTemperature;
-	double molarMass;
+	private MatterState state;
+	private String symbol;
+	private int charge;
+	private int oxidationNumber;
+	private int totalCharge;
+	private int atomicMass;
+	private int neutrons;
+	private int protons;
+	private int electrons;
+	private int atomicNumber;
+	private int moles;
+	private double mass;
+	private double meltingTemperature;
+	private double molarMass;
 	
-	public Element(String symbol, MatterState naturalState, int moles, double molarMass, int neutrons, int protons, int charge)
+	public Element(String symbol, MatterState state, int moles, double molarMass, int neutrons, int protons, int charge)
 	{
-		this.naturalState = naturalState;
+		this.state = state;
 		this.symbol = symbol;
 		this.moles = moles;
 		this.molarMass = molarMass;
@@ -38,9 +38,25 @@ public class Element
 		return this.atomicNumber;
 	}
 	
+	public int getAtomicMass()
+	{
+		return this.atomicMass;
+	}
+	
+
+	public double getAtoms()
+	{
+		return 6.022e23 * this.moles;
+	}
+	
 	public int getCharge()
 	{
 		return this.charge;
+	}
+	
+	public int getElectrons()
+	{
+		return this.electrons;
 	}
 	
 	public double getMass()
@@ -48,19 +64,29 @@ public class Element
 		return this.mass;
 	}
 	
+	public double getMolarMass()
+	{
+		return this.molarMass;
+	}
+	
 	public double getMoles()
 	{
 		return this.moles;
 	}
 	
+	public int getOxidationNumber()
+	{
+		return this.oxidationNumber;
+	}
+	
+	public MatterState getState()
+	{
+		return this.state;
+	}
+	
 	public int getTotalCharge()
 	{
 		return this.totalCharge;
-	}
-	
-	public double getAtoms()
-	{
-		return 6.022e23 * this.moles;
 	}
 	
 	public String toString()
