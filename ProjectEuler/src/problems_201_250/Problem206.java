@@ -1,3 +1,4 @@
+package problems_201_250;
 import java.math.BigInteger;
 
 public class Problem206

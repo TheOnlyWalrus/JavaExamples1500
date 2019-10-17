@@ -1,3 +1,5 @@
+package problems_001_050;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;

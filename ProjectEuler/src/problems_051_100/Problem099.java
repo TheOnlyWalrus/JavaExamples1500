@@ -1,3 +1,5 @@
+package problems_051_100;
+
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.FileInputStream;

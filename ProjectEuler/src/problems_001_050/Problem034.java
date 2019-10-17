@@ -1,3 +1,5 @@
+package problems_001_050;
+
 public class Problem034
 {
 	public static int factorial(int n)

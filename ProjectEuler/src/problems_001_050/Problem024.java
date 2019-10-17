@@ -1,3 +1,5 @@
+package problems_001_050;
+
 public class Problem024
 {	
 	static int count = 0;

@@ -1,3 +1,5 @@
+package problems_001_050;
+
 public class Problem002
 {
 	public static void main(String[] args)

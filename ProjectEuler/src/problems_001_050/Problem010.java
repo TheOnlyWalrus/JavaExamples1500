@@ -1,4 +1,6 @@
-public class Problem007
+package problems_001_050;
+
+public class Problem010
 {
 	public static boolean isPrime(int n)
 	{
@@ -20,23 +22,16 @@ public class Problem007
 	
 	public static void main(String[] args)
 	{
-		int primeToFind = 10001;
-		int counter = 0;
-		int n = 1;
-		int prime = 2;
+		long sum = 0;
 		
-		/* While the current prime number is less than the desired prime number */
-		while (counter < primeToFind)
+		for (int n = 1; n < 2e6; n++)
 		{
-			n++;
 			if (isPrime(n))
 			{
-				prime = n;
-				counter++;
+				sum += n;
 			}
 		}
 		
-		/* Printing out result */
-		System.out.printf("Prime #%d is %d", primeToFind, prime);
+		System.out.println(sum);
 	}
 }

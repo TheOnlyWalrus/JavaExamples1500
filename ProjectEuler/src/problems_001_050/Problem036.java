@@ -1,3 +1,5 @@
+package problems_001_050;
+
 public class Problem036
 {
 	public static String reverse(String s)

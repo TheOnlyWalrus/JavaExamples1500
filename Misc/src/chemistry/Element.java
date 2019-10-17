@@ -42,7 +42,6 @@ public class Element
 	{
 		return this.atomicMass;
 	}
-	
 
 	public double getAtoms()
 	{
@@ -62,6 +61,11 @@ public class Element
 	public double getMass()
 	{
 		return this.mass;
+	}
+	
+	public double getMeltingTemperature()
+	{
+		return this.meltingTemperature;
 	}
 	
 	public double getMolarMass()
