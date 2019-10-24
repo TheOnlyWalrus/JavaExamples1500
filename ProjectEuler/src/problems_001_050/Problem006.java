@@ -8,7 +8,7 @@ public class Problem006
 		int sqSum;
 		int sumOfSq = 0;
 		
-		for (int i = 0; i <= 100; i++)
+		for (int i = 1; i <= 100; i++)
 		{
 			sum += i;
 			sumOfSq += (int)Math.pow(i, 2);
