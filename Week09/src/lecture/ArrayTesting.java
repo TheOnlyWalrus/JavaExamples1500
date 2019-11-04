@@ -32,7 +32,7 @@ public class ArrayTesting
 		{
 			if (isPrime[i])
 			{
-				
+				System.out.println(i);
 			}
 		}
 	}
