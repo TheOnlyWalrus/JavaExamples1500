@@ -88,7 +88,7 @@ public class FrameTesting extends JFrame
         	{
         		if (ex.y[j] < ex.getHeight() - 15)
         		{
-        			ex.y[j] += ex.size[i] / 4;
+        			ex.y[j] += (ex.size[i] / 4) * (ex.size[j] / 4);
         		}
         	}
         	
