@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+//import java.util.Random;
 
 import javax.swing.JFrame;
 
@@ -11,9 +12,10 @@ public class PurpleRain extends JFrame
 	int[] x;
 	int[] y;
 	int[] length;
+//	int[] angle;
 	Color[] colors;
 	int n = 0;
-	int max = 1000;
+	int max = 10000;
 	
 	public PurpleRain()
 	{
@@ -21,6 +23,7 @@ public class PurpleRain extends JFrame
 		
 		x = new int[max];
 		y = new int[max];
+//		angle = new int[max];
 		length = new int[max];
 		colors = new Color[max];
 	}
@@ -59,6 +62,7 @@ public class PurpleRain extends JFrame
 			Color rainColor = colors[i];
 			g2.setColor(rainColor);
 			g2.drawLine(x[i], y[i] - length[i] / 2, x[i], y[i] + length[i] / 2);
+//			g2.drawLine(x[i], y[i] - length[i] / 2, x[i] + angle[i], y[i] + length[i] / 2);
 		}
 		
 		Graphics2D g2d = (Graphics2D)g;
@@ -78,6 +82,16 @@ public class PurpleRain extends JFrame
         		ex.y[ex.n] = 0;
         		/* Choose random x value */
         		ex.x[ex.n] = (int)(ex.getWidth() * Math.random());
+
+        		/* Choose random angle */
+//        		int sign;
+//        		double r = Math.random();
+//        		if (r > 0.5)
+//        			sign = 1;
+//        		else
+//        			sign = -1;
+//        		ex.angle[ex.n] = sign * (int)((Math.random() * 5) / 2);
+        		
         		/* Random size */
         		ex.length[ex.n] = (int)((Math.random() + 1) * 5);
         		/* Color scale */
@@ -91,7 +105,8 @@ public class PurpleRain extends JFrame
         	{
         		if (ex.y[j] < ex.getHeight())
         		{
-        			ex.y[j] += (ex.length[j] / 4);
+        			ex.y[j] += (ex.length[j] / 4) * 2;
+//        			ex.x[j] += ex.angle[j];
         		}
         		else
         		{
