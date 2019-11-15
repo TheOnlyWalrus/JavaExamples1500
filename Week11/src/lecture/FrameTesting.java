@@ -16,6 +16,7 @@ public class FrameTesting extends JFrame
 	Color[] colors;
 	int n = 0;
 	int nmax = 1000;
+	int wind = 1;
 	
 	public FrameTesting()
 	{
@@ -42,7 +43,7 @@ public class FrameTesting extends JFrame
 	private void initUI()
 	{
 		setTitle("Example");
-		setSize(300, 300);
+		setSize(500, 500);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
@@ -76,11 +77,16 @@ public class FrameTesting extends JFrame
         {
         	if (ex.n < ex.nmax)
         	{
+        		/* Create at top of screen */
         		ex.y[ex.n] = 0;
+        		/* Choose random x value */
         		ex.x[ex.n] = (int)(ex.getWidth() * Math.random());
+        		/* Random size */
         		ex.size[ex.n] = (int)((Math.random() + 1) * 5);
+        		/* Color scale */
         		int scale = (int)(200 + 55 * Math.random());
         		ex.colors[ex.n] = new Color(scale, scale, scale);
+        		/* Next */
         		ex.n++;
         	}
         	
@@ -89,6 +95,20 @@ public class FrameTesting extends JFrame
         		if (ex.y[j] < ex.getHeight() - 15)
         		{
         			ex.y[j] += (ex.size[i] / 4) * (ex.size[j] / 4);
+        		}
+        		
+        		if (ex.x[j] < ex.getWidth() && ex.x[j] > 0 && ex.y[j] < ex.getHeight() - 15)
+        		{
+        			ex.x[j] += ex.wind;
+        		}
+        		
+        		if (ex.x[j] >= ex.getWidth() || ex.x[j] <= 0)
+        		{
+        			ex.y[j] = 0;
+            		ex.x[j] = (int)(ex.getWidth() * Math.random());
+            		ex.size[j] = (int)((Math.random() + 1) * 5);
+            		int scale = (int)(200 + 55 * Math.random());
+            		ex.colors[j] = new Color(scale, scale, scale);
         		}
         	}
         	
