@@ -13,7 +13,7 @@ public class PurpleRain extends JFrame
 	int[] length;
 	Color[] colors;
 	int n = 0;
-	int max = 10000;
+	int max = 1000;
 	
 	public PurpleRain()
 	{
