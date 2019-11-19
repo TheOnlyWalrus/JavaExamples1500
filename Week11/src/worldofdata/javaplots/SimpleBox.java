@@ -1,12 +1,9 @@
 package worldofdata.javaplots;
 import java.awt.*;
-import java.awt.event.*;
-import java.awt.geom.AffineTransform;
 import java.util.Arrays;
 import java.util.Random;
-
-import javax.swing.*;
  
+@SuppressWarnings("serial")
 public class SimpleBox extends SimpleGraphComponent {
 
 	double [][] x= {{1,2,3,4,5,6}};
@@ -154,7 +151,6 @@ public class SimpleBox extends SimpleGraphComponent {
     	Arrays.sort(x);
     	double min = x[0];
     	double q1 = x[x.length/4];
-    	double med = x[x.length/2];
     	double q3 = x[3*x.length/4];
     	double max = x[x.length-1];
     	int ol1=-1;
@@ -182,10 +178,9 @@ public class SimpleBox extends SimpleGraphComponent {
     		}
     	}
     	
-    	int pymin,py1,pymed,py3,pymax;
+    	int pymin,py1,py3,pymax;
     	pymin = real2PixelY(min);
     	py1 = real2PixelY(q1);
-    	pymed = real2PixelY(med);
     	py3 = real2PixelY(q3);
     	pymax = real2PixelY(max);
     	
