@@ -1,0 +1,16 @@
+package grass;
+
+enum TokenType
+{
+	PLUS, MINUS, STAR, SLASH, CARROT, LPAREN, RPAREN,
+	
+	SEMICOLON,
+	
+	AND, OR, XOR, TRUE, FALSE,
+	
+	STRING, DIGIT, DOT, IDENTIFIER,
+	
+	PRINT, PRINTLN,
+	
+	EOF
+}
