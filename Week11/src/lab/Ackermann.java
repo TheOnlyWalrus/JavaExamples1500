@@ -116,8 +116,8 @@ public class Ackermann
 	
 	public static void main(String[] args)
 	{
-		int m = 1;
-		int n = 1;
+		int m = 2;
+		int n = 2;
 		
 		int Ar = A(m, n, 0);
 		
