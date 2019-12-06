@@ -55,7 +55,6 @@ public class Lewis2D extends JFrame
 			char[] chars = this.elements[i].symbol.toCharArray();
 			g2.setColor(textColor);
 			g2.drawChars(chars, 0, chars.length, x + size / 3, y + (int)(size / 1.5));
-			
 			g2.drawLine(x, y, this.x[next], this.y[next]);
 		}
 		
