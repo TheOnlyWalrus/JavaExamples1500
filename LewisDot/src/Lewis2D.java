@@ -1,7 +1,6 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Point;
 import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
@@ -41,6 +40,12 @@ public class Lewis2D extends JFrame
 			Color color = Color.WHITE;
 			Color textColor = Color.YELLOW;
 			
+			int next;
+			if (i + 1 >= this.elements.length)
+				next = 0;
+			else
+				next = i + 1;
+			
 			int x = this.x[i];
 			int y = this.y[i];
 			int size = 25;
@@ -50,6 +55,8 @@ public class Lewis2D extends JFrame
 			char[] chars = this.elements[i].symbol.toCharArray();
 			g2.setColor(textColor);
 			g2.drawChars(chars, 0, chars.length, x + size / 3, y + (int)(size / 1.5));
+			
+			g2.drawLine(x, y, this.x[next], this.y[next]);
 		}
 		
 		Graphics2D g2d = (Graphics2D)g;

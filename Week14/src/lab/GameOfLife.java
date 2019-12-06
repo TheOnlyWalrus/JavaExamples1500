@@ -68,16 +68,16 @@ public class GameOfLife
 //		cells[cx + 3][cy + 2] = 1;
 		
 		/* Default conway */
-//		for (int i = 0; i < n; i++)
-//		{
-//			for (int j = 0; j < n; j++)
-//			{
-//				if (Math.random() < 0.25)
-//				{
-//					cells[i][j] = 1;
-//				}
-//			}
-//		}
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j < n; j++)
+			{
+				if (Math.random() < 0.25)
+				{
+					cells[i][j] = 1;
+				}
+			}
+		}
 		
 		SimpleGrid s = new SimpleGrid(601, 601);
 		s.setBelowRange(Color.BLACK);
