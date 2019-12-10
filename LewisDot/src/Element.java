@@ -1,5 +1,3 @@
-
-
 public class Element
 {
 	public int group;

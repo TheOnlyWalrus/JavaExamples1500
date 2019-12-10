@@ -10,6 +10,7 @@ public class Lewis2D extends JFrame
 	private static final long serialVersionUID = -8664080449170670808L;
 	
 	Element[] elements;
+	int radius = 25;
 	int[] x;
 	int[] y;
 	
@@ -46,16 +47,15 @@ public class Lewis2D extends JFrame
 			else
 				next = i + 1;
 			
-			int x = this.x[i];
-			int y = this.y[i];
-			int size = 25;
+			int x = this.x[i] - (radius / 2);
+			int y = this.y[i] - (radius / 2);
 			
 			g2.setColor(color);
-			g2.drawOval(x, y, size, size);
+			g2.drawOval(x, y, radius, radius);
 			char[] chars = this.elements[i].symbol.toCharArray();
 			g2.setColor(textColor);
-			g2.drawChars(chars, 0, chars.length, x + size / 3, y + (int)(size / 1.5));
-			g2.drawLine(x, y, this.x[next], this.y[next]);
+			g2.drawChars(chars, 0, chars.length, x + (radius / 2), y + (radius / 2));
+			g2.drawLine(x + (radius / 2), y + (radius / 2), this.x[next], this.y[next]);
 		}
 		
 		Graphics2D g2d = (Graphics2D)g;
