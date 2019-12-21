@@ -3,7 +3,10 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 //import java.util.Random;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
 @SuppressWarnings("serial")
@@ -15,6 +18,7 @@ public class PurpleRain extends JFrame
 	Color[] colors;
 	int n = 0;
 	int max = 100000;
+	BufferedImage prince = null;
 	
 	public PurpleRain()
 	{
@@ -45,6 +49,15 @@ public class PurpleRain extends JFrame
 		setVisible(true);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		try
+		{
+			prince = ImageIO.read(new File("src/res/prince.jpg"));
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	public void paint(Graphics g)

@@ -79,6 +79,7 @@ public class GameOfLife
 			}
 		}
 		
+		/* Display */
 		SimpleGrid s = new SimpleGrid(601, 601);
 		s.setBelowRange(Color.BLACK);
 		s.setMinColor(Color.GREEN);
